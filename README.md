@@ -1,4 +1,4 @@
-# Posts👋
+# Lanches👋
 - Aplicativo de estudos **Lista** e **detalhes**
 - React Native + Expo
 
