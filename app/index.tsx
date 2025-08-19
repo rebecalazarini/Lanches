@@ -1,13 +1,13 @@
 import { router } from "expo-router";
-import { View, FlatList, StyleSheet, TouchableOpacity, Text } from "react-native";
-import { posts } from "../assets/mockups/posts";
+import { FlatList, StyleSheet, Text, TouchableOpacity, View, Image } from "react-native";
+import { lanches } from "../assets/mockups/lanches";
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#ecd3feff",
+    backgroundColor: "#fee9d3ff",
   },
   list: {
     padding: 20,
@@ -17,19 +17,25 @@ const styles = StyleSheet.create({
   item: {
     padding: 20,
     margin: 6,
-    backgroundColor: "#e09df9ff",
+    backgroundColor: "#ff863bff",
     borderRadius: 8,
     alignItems: "center",
     justifyContent: "space-between",
   },
-  titulo: {
+  nome: {
     fontSize: 18,
     fontWeight: "bold",
-    color: "#530e8fff",
+    color: "#000000ff",
   },
   text: {
     fontSize: 14,
-    color: "#000000ff",
+    color: "#222222ff",
+  },
+  imagem: {
+    width: 100,
+    height: 100,
+    borderRadius: 8,
+    marginTop: 8,
   },
 });
 
@@ -44,14 +50,15 @@ export default function Index() {
     >
       <FlatList
       style={styles.list}
-      data={posts}
+      data={lanches}
       renderItem={({ item }) => (
         <TouchableOpacity 
         style={styles.item} 
         onPress={() => irDetalhes(item.id)}
         >
-          <Text style={styles.titulo}>Título: {item.title}</Text>
-          <Text style={styles.text}>Conteúdo: {item.content}</Text>
+          <Text style={styles.nome}>Nome: {item.nome}</Text>
+          <Text style={styles.text}>Ingredientes: {item.ingredientes.join(", ")}</Text>
+          <Image source={{ uri: item.imagem }} style={styles.imagem} />
         </TouchableOpacity>
       )}
     />

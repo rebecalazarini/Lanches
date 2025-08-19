@@ -3,7 +3,7 @@ import { StyleSheet } from "react-native";
 
 const styles = StyleSheet.create({
   faixa: {
-    backgroundColor: "rgba(203, 136, 242, 1)",
+    backgroundColor: "rgba(242, 191, 136, 1)",
   },
   texto: {
     color: "#fff",

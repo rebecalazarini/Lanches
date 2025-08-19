@@ -1,26 +1,26 @@
 import { useLocalSearchParams } from "expo-router/build/hooks";
-import { Text, View, StyleSheet, Image } from "react-native";
-import { posts } from "../assets/mockups/posts";
+import { Image, StyleSheet, Text, View } from "react-native";
+import { lanches } from "../assets/mockups/lanches";
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#ecd3feff",
+    backgroundColor: "#fee9d3ff",
   },
-    titulo: {
+    nome: {
     fontSize: 18,
     fontWeight: "bold",
-    color: "#530e8fff",
+    color: "#000000ff",
   },
   text: {
     fontSize: 14,
     color: "#000000ff",
   },
   imagem: {
-    width: 100,
-    height: 100,
+    width: 200,
+    height: 200,
     borderRadius: 8,
     marginVertical: 8,
   },
@@ -29,15 +29,15 @@ const styles = StyleSheet.create({
 export default function Index() {
    const { id } = useLocalSearchParams();
 
-   let indice = posts.findIndex(post => post.id === Number(id));
-  
+   let indice = lanches.findIndex(lanche => lanche.id === Number(id));
+
    return (
     <View
         style={styles.container}
     >
-      <Text style={styles.titulo}>{posts[indice].title}</Text>
-      <Text style={styles.text}>{posts[indice].content}</Text>
-      <Image source={{ uri: posts[indice].image }} style={styles.imagem} />
+      <Text style={styles.nome}>{lanches[indice].nome}</Text>
+      <Text style={styles.text}>{lanches[indice].ingredientes.join(", ")}</Text>
+      <Image source={{ uri: lanches[indice].imagem }} style={styles.imagem} />
     </View>
   );
 }
