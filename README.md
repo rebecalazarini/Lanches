@@ -1,7 +1,7 @@
 # Lanches👋
 - Aplicativo de estudos **Lista** e **detalhes**
 - React Native + Expo
-- Feito em dupla com a ![Larissa Santos](https://github.com/larissadossantosdarocha)
+- Feito em dupla com a [Larissa Santos](https://github.com/larissadossantosdarocha)
 
 ## Passos par aexecutar
 
