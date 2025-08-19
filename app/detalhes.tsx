@@ -38,6 +38,8 @@ export default function Index() {
       <Text style={styles.nome}>{lanches[indice].nome}</Text>
       <Text style={styles.text}>{lanches[indice].ingredientes.join(", ")}</Text>
       <Image source={{ uri: lanches[indice].imagem }} style={styles.imagem} />
+      <Text style={styles.text}>Preço: R$ {lanches[indice].preco.toFixed(2)}</Text>
+      
     </View>
   );
 }
