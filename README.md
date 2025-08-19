@@ -17,3 +17,9 @@
    ```bash
    npx expo start
    ```
+
+   screenshot
+    ![Screenshot](./assets/images/Captura%20de%20tela%202025-08-19%20135758.png)
+    ![Screenshot](./assets/images/Captura%20de%20tela%202025-08-19%20135829.png)
+    ![Screenshot](./assets/images/Captura%20de%20tela%202025-08-19%20135844.png)
+
